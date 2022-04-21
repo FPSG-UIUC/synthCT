@@ -12,6 +12,7 @@ Interested in synthesized translations? Look
 translations synthesized in our experiments!
 
 This is a research prototype, so please be gentle :smile:
+
 If there are glaring bugs that prevent you from running the prototype, please open an
 issue and we will try to fix it ASAP.
 
@@ -31,17 +32,20 @@ We recommend using [docker](https://docs.docker.com/get-docker/) for quick setup
 4. Run docker build script: `./build_docker.sh`
 5. Create a directory to save synthesis results: `mkdir synth_results`
 6. Start the docker image:
+
 `docker run -it /<absolute_path>/synth_results/:/synthesis/synthCT/synth-results synthesis:latest`
 
 To synthesis an example instruction, e.g., add-with-carry (ADCQ):
 
-`python3 -m synthesis.synthesis \
+```
+python3 -m synthesis.synthesis \
   --isa ./third-party/x86-64-semantics/semantics/registerInstructions/*.k \
   --only "ADCQ-R64-R64" \
   --pseudo-inst ./synthesis/pseudo.yaml \
   --selector "knn" \
   --parallel-tasks 2 \
-  --timeout 1200`
+  --timeout 1200
+```
 
 Synthesis is designed to run forever, trying to generate multiple different solutions.
 Once a translation has been found, use CTRL+C to terminate synthesis and check

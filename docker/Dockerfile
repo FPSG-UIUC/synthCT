@@ -61,12 +61,12 @@ ENV LOGURU_LEVEL='SUCCESS'
 RUN -i "s/127.0.0.1/$conn/g" /synthesis/synthCT/conn.yaml
 
 WORKDIR /synthesis/synthCT
-CMD python3 -m synthesis.synthesis \
-    --isa ./third-party/X86-64-semantics/semantics/registerInstructions/*.k \
-    --pseudo-inst ./synthesis/pseudo.yaml \
-    --selector "knn" \
-    --parallel-tasks 75 \
-    --timeout 1200 \
-    --try-instruction-factorization \
-    --factorizer='bottom_up' \
-    --conn conn.yaml
+#CMD python3 -m synthesis.synthesis \
+    #--isa ./third-party/X86-64-semantics/semantics/registerInstructions/*.k \
+    #--pseudo-inst ./synthesis/pseudo.yaml \
+    #--selector "knn" \
+    #--parallel-tasks 75 \
+    #--timeout 1200 \
+    #--try-instruction-factorization \
+    #--factorizer='bottom_up' \
+    #--conn conn.yaml
