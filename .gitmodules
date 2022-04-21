@@ -1,0 +1,3 @@
+[submodule "third-party/X86-64-semantics"]
+	path = third-party/X86-64-semantics
+	url = https://github.com/kframework/X86-64-semantics

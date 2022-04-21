@@ -1,0 +1,90 @@
+# YAML file that specifies pseudo-instructions to use for synthesis
+MOVQ-IMM-R64:
+    file: "pseudo.rkt"
+    opcount: 2
+    operands: ['i', 'r2']
+    outputs: ['r2']
+
+PMOVQ-R64-R64:
+    file: "pseudo.rkt"
+    opcount: 2
+    operands: ['r1', 'r2']
+    outputs: ['r2']
+
+PNOT-R64:
+    file: "pseudo.rkt"
+    opcount: 1
+    operands: ['r2']
+    outputs: ['r2']
+
+PSPLIT-R64-R64:
+    file: "pseudo.rkt"
+    opcount: 3
+    operands: ['r1', 'r2', 'r3']
+    outputs: ['r1', 'r2']
+
+PCONCAT-R32-R32:
+    file: "pseudo.rkt"
+    opcount: 3
+    operands: ['r1', 'r2', 'r3']
+    outputs: ['r2']
+
+#PMOV-FLAG-R64:
+    #file: "pseudo.rkt"
+    #opcount: 2
+    #operands: ['i', 'r2']
+    #outputs: ['r2']
+
+#PMOV-R64-FLAG:
+    #file: "pseudo.rkt"
+    #opcount: 2
+    #operands: ['r1', 'i']
+    #outputs: [] # TODO
+
+#PSET-FLAG:
+    #file: "pseudo.rkt"
+    #opcount: 1
+    #operands: ['i']
+    #outputs: [] # TODO
+
+#PRESET-FLAG:
+    #file: "pseudo.rkt"
+    #opcount: 1
+    #operands: ['i']
+    #outputs: [] # TODO
+
+PCMOV-R64-R64-R64:
+    file: "pseudo.rkt"
+    opcount: 3
+    operands: ['r1', 'r2', 'r3']
+    outputs: ['r2']
+
+PNOP:
+    file: "pseudo.rkt"
+    opcount: 0
+    operands: []
+    outputs: [] # TODO
+
+#PEXTRACT-R64-BIT:
+    #file: "pseudo.rkt"
+    #opcount: 2
+    #operands: ['i', 'r1']
+    #outputs: ['r1']
+
+POR-R64-R64:
+    file: "pseudo.rkt"
+    opcount: 2
+    operands: ['r1', 'r2']
+    outputs: ['r2']
+
+PAND-R64-R64:
+    file: "pseudo.rkt"
+    opcount: 2
+    operands: ['r1', 'r2']
+    outputs: ['r2']
+
+PXOR-R64-R64:
+    file: "pseudo.rkt"
+    opcount: 2
+    operands: ['r1', 'r2']
+    outputs: ['r2']
