@@ -33,7 +33,7 @@ We recommend using [docker](https://docs.docker.com/get-docker/) for quick setup
 5. Create a directory to save synthesis results: `mkdir synth_results`
 6. Start the docker image:
 
-`docker run -it /<absolute_path>/synth_results/:/synthesis/synthCT/synth-results synthesis:latest`
+`docker run -v /<absolute_path>/synth_results/:/synthesis/synthCT/synth-results -it synthesis:latest`
 
 To synthesis an example instruction, e.g., add-with-carry (ADCQ):
 
